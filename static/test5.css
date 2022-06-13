@@ -1,0 +1,140 @@
+html, body {
+    height: 100%;
+}
+
+.box-wrapper {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.box-container{
+    flex-direction: column;
+    width: 90%;
+    height: 100%;
+}
+.top-box {
+    display: flex;
+    width: 100%;
+    height: 50%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+.top-left {
+    background-color: red;
+    width: 150px;
+    height: 150px;
+    animation-name: left;
+    animation-duration: 143ms;
+    animation-iteration-count: infinite;
+}
+
+.tl-text {
+    display: flex;
+    font-size: 50px;
+    justify-content: center;
+}
+
+.top-right {
+    background-color: blue;
+    width: 150px;
+    height: 150px;
+    animation-name: right;
+    animation-duration: 77ms;
+    animation-iteration-count: infinite;
+}
+
+.tr-text {
+    display: flex;
+    font-size: 50px;
+    justify-content: center;
+}
+
+.bottom-box {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-top: 40px;
+}
+
+.bottom-left {
+    background-color: purple;
+    width: 150px;
+    height: 150px;
+    animation-name: left;
+    animation-duration: 143ms;
+    animation-iteration-count: infinite;
+}
+
+.bl-text {
+    display: flex;
+    font-size: 50px;
+    justify-content: center;
+}
+
+.bottom-right {
+    background-color: yellow;
+    width: 150px;
+    height: 150px;
+    animation-name: right;
+    animation-duration: 77ms;
+    animation-iteration-count: infinite;
+}
+
+.br-text {
+    display: flex;
+    font-size: 50px;
+    justify-content: center;
+}
+
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 50px;
+    height: 50px;
+}
+
+.center:before, .center:after {
+    position: absolute;
+    left: 0px;
+    bottom: 5px;
+    content: ' ';
+    height: 100px;
+    width: 10px;
+    background-color: #000;
+}
+
+.center:before {
+    transform: rotate(90deg);
+}
+
+.center:after {
+    transform: rotate(-180deg);
+}
+
+@keyframes left {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes right {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../static/common.css"/>
+    <script
+            src="https://code.jquery.com/jquery-3.6.0.min.js"
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+            crossorigin="anonymous"
+    ></script>
+    <title>Home</title>
+</head>
+<body>
+<div class="box-wrapper">
+    <div class="box">
+        <div class="left-wrapper">
+            <img src="../static/img/bc.PNG" class="left" width="500px" height="500px">
+            <div class="left-text">도움</div>
+        </div>
+        <div class="right-wrapper">
+            <img src="../static/img/rc.PNG" class="right" width="500px" height="500px">
+            <div class="right-text">TV</div>
+        </div>
+    </div>
+
+    <div class="center">
+
+    </div>
+</div>
+<script>
+    setTimeout(() => {
+        const searchParams = new URLSearchParams(location.search);
+        $.ajax({
+            type: 'GET',
+            url: 'http://127.0.0.1:5000/ssvep?idx=' + searchParams.get('idx') + '&date=' + searchParams.get('date'),
+            success: function (data) {
+                if (data.result.hz === 11) {
+                    window.location.href = 'http://127.0.0.1:5000/rest?idx=' + data.result.idx + '&date=' + data.result.date + '&loc=call';
+                }
+                // TV OFF
+                if (data.result.hz === 17) {
+                    window.location.href = 'http://127.0.0.1:5000/rest?idx=' + data.result.idx + '&date=' + data.result.date + '&loc=tv';
+                }
+
+            }
+        }).catch((e) => {
+
+        });
+    }, 1000);
+</script>
+</body>
+</html>

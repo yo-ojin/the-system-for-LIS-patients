@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script
+            src="https://code.jquery.com/jquery-3.6.0.min.js"
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+            crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" type="text/css" href="../static/rest.css"/>
+    <title>Rest</title>
+</head>
+<body>
+
+<div class="rest-container">
+    <img src="../static/img/rest.jpg" class="rest-img">
+    <p class="rest-text" id="text"></p>
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        console.log("fdsfasdfasdf")
+        const searchParams = new URLSearchParams(location.search);
+        const loc = searchParams.get('loc')
+        console.log(loc)
+        if (loc === 'home') {
+            console.log('home!!!!!!!!!!!!!!!')
+            $('#text').text('30초 휴식후 TV,도움 자극 화면으로 넘어갑니다.');
+        }
+        if (loc === 'tv') {
+            $('#text').text('30초 휴식후 TV 자극 화면으로 넘어갑니다.');
+        }
+        if (loc === 'call') {
+            $('#text').text('30초 휴식후 도움 자극 화면으로 넘어갑니다.');
+        }
+        setTimeout(() => {
+                const searchParams = new URLSearchParams(location.search);
+                const loc = searchParams.get('loc')
+                if (loc === 'home') {
+                    window.location.href = 'http://127.0.0.1:5000/home?idx=' + searchParams.get('idx') + '&date=' + searchParams.get('date');
+                    $('.rest-text').val('30초 휴식후 TV,도움 자극 화면으로 넘어갑니다.');
+                }
+                if (loc === 'tv') {
+                    window.location.href = 'http://127.0.0.1:5000/tvcontrol?idx=' + searchParams.get('idx') + '&date=' + searchParams.get('date');
+                    $('.rest-text').val('30초 휴식후 TV 자극 화면으로 넘어갑니다.');
+                }
+                if (loc === 'call') {
+                    window.location.href = 'http://127.0.0.1:5000/call?idx=' + searchParams.get('idx') + '&date=' + searchParams.get('date');
+                    $('.rest-text').val('30초 휴식후 도움 자극 화면으로 넘어갑니다.');
+                }
+            },
+            30000
+        );
+
+    });
+
+</script>
+</body>
+</html>
