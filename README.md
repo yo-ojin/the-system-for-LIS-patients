@@ -2,17 +2,21 @@
 -------------------------------------
 
 
-# 팀원 소개✏
 
-![image](https://user-images.githubusercontent.com/74172467/204210813-ace0029f-e6b1-419a-8946-001ad68ee9c3.png)
-
--------------------------------------
-
-![LSI_demo_movie](https://user-images.githubusercontent.com/74172467/204220543-767998a6-5595-4911-841f-b6a4790867b0.gif) 
-
+<p align="center"><img src="https://user-images.githubusercontent.com/74172467/204238519-4af4fd86-d7ce-4318-b5f7-b104204d4269.gif" width= "700">
+    
 ## Full demo on -> [Youtube](https://youtu.be/MI3txBwcGmY)💫
 
+    
+    
+# 사용된 기기✏
 
+ <img src="https://user-images.githubusercontent.com/74172467/204225893-72915129-70ce-499b-bff9-c03f2175a322.png" width="300" height = "300">
+
+
+
+
+MAVE: 전전두엽(Fp1, Fp2) 두 채널에서 EEG를 비침습적 방법으로 수집한다.
 
 # 모듈구성✏
 - FindBlink.py: 눈 깜빡임을 검출
@@ -96,3 +100,10 @@ ssvep 데이터를 분석한 후 사용자의 의도를 파악할 수 있다.
 한계점:
 - 본 프로젝트에서 사용된 기기는 MAVE이다. MAVE는 전전두염(Fp1, Fp2) 두 채널에서 비침습적 방법으로 뇌파를 수집한다. 시각 자극에 보다 큰 반응을 보이는 후두엽(O1,O2) 채널을 수집하는 기기를 사용했다면 더 높은 성능을 기대할 수 있다.
 - 개인별로 SSVEP의 기준이 달랐다. 따라서 획일화된 명확한 임계값을 정하기 어려웠다. 더 높은 성능을 위해서 개인별 최적화 기능을 고려해볼 수 있다.
+
+    
+-------------------------------------------
+    
+# 팀원 소개✏
+
+![image](https://user-images.githubusercontent.com/74172467/204210813-ace0029f-e6b1-419a-8946-001ad68ee9c3.png)
