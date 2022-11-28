@@ -7,6 +7,11 @@
 ![image](https://user-images.githubusercontent.com/74172467/204210813-ace0029f-e6b1-419a-8946-001ad68ee9c3.png)
 
 
+
+### Full demo on [Youtube](https://youtu.be/MI3txBwcGmY)
+
+
+
 # 모듈구성✏
 - FindBlink.py: 눈 깜빡임을 검출
 - analysis.py:  파일을 읽고 눈 깜빡임을 검출한 뒤 검출했다면 그에 맞는 결과 반환 
@@ -82,4 +87,4 @@ ssvep 데이터를 분석한 후 사용자의 의도를 파악할 수 있다.
 
 # 고찰✏
 
-- 
+장점: Mave에서 제공하는 FFT는 평균 fps
