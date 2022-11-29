@@ -5,7 +5,7 @@
 
 <p align="center"><img src="https://user-images.githubusercontent.com/74172467/204238519-4af4fd86-d7ce-4318-b5f7-b104204d4269.gif" width= "700">
     
-💫# Full demo on -> [Youtube](https://youtu.be/MI3txBwcGmY)💫
+# 💫 Full demo on -> [Youtube](https://youtu.be/MI3txBwcGmY)💫
 
     
     
